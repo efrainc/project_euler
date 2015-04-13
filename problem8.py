@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 
-def problem8(sqeuence):
+def sequence_maximum(sqeuence):
     """Find the sequnce of 13 numbers whos multiplied
     value is the greatest from an input list of values.
     Input must be in list form or cleaned string format"""
@@ -17,6 +17,16 @@ def problem8(sqeuence):
         i += 1
     return maximum
 
+
+def clean_string(string):
+    """Remove newline characters from strings and convert
+    the string into a list format"""
+
+    string_into_list = []
+    for item in string:
+        if item != '\n':
+            string_into_list.append(item)
+    return string_into_list
 
 test_string = """7316717653133062491922511967442657474235534919493
 496983520312774506326239578318016984801869478851843
@@ -41,10 +51,5 @@ test_string = """7316717653133062491922511967442657474235534919493
 
 
 if __name__ == '__main__':
-    # Clean test_string of '/n' characters
-    string_into_list = []
-    for i in test_string:
-        if i != '\n':
-            string_into_list.append(i)
-    print problem8(string_into_list)
-
+    cleaned = clean_string(test_string)
+    print sequence_maximum(cleaned)

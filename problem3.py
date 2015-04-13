@@ -4,7 +4,10 @@
 def largest_prime(num):
     """Find the largest prime for a input number"""
 
-    prime = 0
+    if num == 0:
+        return 0
+
+    prime = 1
     divisor = 2
     while num > divisor:
         while num % divisor != 0:
