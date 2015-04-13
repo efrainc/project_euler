@@ -1,19 +1,16 @@
 #! /usr/bin/env python
 
 
+import math
+
+
 def check_if_prime(num):
     """Determine if input is a prime number"""
 
-    denominator = 2
-    while num > denominator:
-        if num % denominator != 0:
-            denominator += 1
-            found_prime = denominator
-        else:
+    for item in xrange(2, int(math.sqrt(num)+1)):
+        if num % item == 0:
             return None
-    if found_prime == num:
-        return found_prime
-    return None
+    return num
 
 
 def find_xprime(number):
