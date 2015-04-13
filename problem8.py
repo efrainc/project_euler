@@ -2,6 +2,10 @@
 
 
 def problem8(sqeuence):
+    """Find the sequnce of 13 numbers whos multiplied
+    value is the greatest from an input list of values.
+    Input must be in list form or cleaned string format"""
+
     maximum = 0
     i = 0
     while i < len(sqeuence)-12:
@@ -37,10 +41,10 @@ test_string = """7316717653133062491922511967442657474235534919493
 
 
 if __name__ == '__main__':
+    # Clean test_string of '/n' characters
     string_into_list = []
     for i in test_string:
         if i != '\n':
             string_into_list.append(i)
-    # print string_into_list
     print problem8(string_into_list)
 

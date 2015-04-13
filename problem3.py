@@ -2,16 +2,18 @@
 
 
 def largest_prime(num):
+    """Find the largest prime for a input number"""
+
     prime = 0
-    n = 2
-    while num > n:
-        while num % n != 0:
-            n += 1
-            if n > prime:
-                prime = n
-        num = num / n
+    divisor = 2
+    while num > divisor:
+        while num % divisor != 0:
+            divisor += 1
+            if divisor > prime:
+                prime = divisor
+        num = num / divisor
     return prime
+
 
 if __name__ == '__main__':
     print largest_prime(600851475143)
-

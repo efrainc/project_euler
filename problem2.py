@@ -2,6 +2,9 @@
 
 
 def fibtest():
+    """Calculates the sum of even fibonacci
+    numbers between 0 and 4000000"""
+
     i = 0
     first = 1
     second = 2

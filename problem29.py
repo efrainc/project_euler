@@ -2,6 +2,10 @@
 
 
 def find_powers():
+    """Calculates the result of unique power
+    combinations for x^y in range 2-101 for
+    both x and y"""
+
     final = []
     for x in xrange(2, 101):
         for y in xrange(2, 101):
