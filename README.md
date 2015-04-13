@@ -1,4 +1,5 @@
 # project_euler
+[![Build Status](https://travis-ci.org/efrainc/project_euler.svg?branch=master)](https://travis-ci.org/efrainc/project_euler)
 
 Efrain Camacho
 The propose of this git repository is to practice python and general coding
