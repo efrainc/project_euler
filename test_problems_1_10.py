@@ -4,6 +4,8 @@ from problem1 import problem1
 from problem2 import fibtest
 from problem3 import largest_prime
 from problem4 import probl4
+from problem5 import smallest_multiple
+from problem6 import sum_square_difference
 from problem7 import find_xprime
 from problem8 import sequence_maximum, test_string, clean_string
 
@@ -36,6 +38,21 @@ def test_problem4():
     as defined by Project Euler"""
 
     assert 906609 == probl4()
+
+
+def test_problem5():
+    """Testing Problem one edge case
+    as defined by Project Euler"""
+
+    assert 232792560 == smallest_multiple()
+
+
+def test_problem6():
+    """Testing Problem one edge case
+    as defined by Project Euler"""
+
+    assert 25164150 == sum_square_difference()
+
 
 # This test tackes a long time to run since it has to
 # calculate each prime number from 1 to 10,000. Test passes
