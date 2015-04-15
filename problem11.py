@@ -52,15 +52,14 @@ def diag(g, max):
 
 
 def product_max(g):
+    """solve problem with less time complexity"""
+
     maxp = 0
     for l in xrange(len(G)):
         for m in xrange(len(G)):
             vertical = get(l, m) * get(l+1, m) * get(l+2, m) * get(l+3, m)
-            # print "vertical is " + str(vertical)
             horizontal = get(l, m) * get(l, m+1) * get(l, m+2) * get(l, m+3)
-            # print "horizontal is " + str(horizontal)
             rightdiag = get(l, m) * get(l+1, m+1) * get(l+2, m+2) * get(l+3, m+3)
-            # print "rightdiag is " + str(rightdiag)
             if max(vertical, horizontal, rightdiag) > maxp:
                 maxp = max(vertical, horizontal, rightdiag)
     for l in xrange(len(G), 0, -1):
@@ -72,6 +71,7 @@ def product_max(g):
 
 
 def get(i, j):
+    """get value at the index if it is above that return 0"""
     try:
         return G[i][j]
     except IndexError:
