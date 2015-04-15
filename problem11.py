@@ -51,6 +51,33 @@ def diag(g, max):
     return max
 
 
+def product_max(g):
+    maxp = 0
+    for l in xrange(len(G)):
+        for m in xrange(len(G)):
+            vertical = get(l, m) * get(l+1, m) * get(l+2, m) * get(l+3, m)
+            # print "vertical is " + str(vertical)
+            horizontal = get(l, m) * get(l, m+1) * get(l, m+2) * get(l, m+3)
+            # print "horizontal is " + str(horizontal)
+            rightdiag = get(l, m) * get(l+1, m+1) * get(l+2, m+2) * get(l+3, m+3)
+            # print "rightdiag is " + str(rightdiag)
+            if max(vertical, horizontal, rightdiag) > maxp:
+                maxp = max(vertical, horizontal, rightdiag)
+    for l in xrange(len(G), 0, -1):
+        for m in xrange(len(G)):
+            leftdiag = get(l, m) * get(l+1, m-1) * get(l+2, m-2) * get(l+3, m-3)
+            if leftdiag > maxp:
+                maxp = leftdiag
+    return maxp
+
+
+def get(i, j):
+    try:
+        return G[i][j]
+    except IndexError:
+        return 0
+
+
 def grid_creator():
     """formats the given grid from project euler"""
 
@@ -81,6 +108,8 @@ def grid_creator():
         grid[i] = [int(s) for s in grid[i].split(' ')]
     return grid
 
-if __name__ == '__main__':
+G = grid_creator()
 
+if __name__ == '__main__':
     print grid_max(grid_creator())
+    print product_max(grid_creator())
