@@ -3,6 +3,7 @@
 
 from problem11 import grid_max, grid_creator
 from problem14 import problem14_version2
+from problem15 import number_routs
 
 
 def test_problem11():
@@ -32,4 +33,5 @@ def test_prblem14():
 
     assert (837799, 524) == problem14_version2()
 
-
+def test_problem15():
+    assert 137846528820 == number_routs()
