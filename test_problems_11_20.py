@@ -2,11 +2,11 @@
 
 
 from problem11 import grid_max, grid_creator
+from problem14 import problem14_version2
 
 
 def test_problem11():
-    """Testing Problem 11 edge case
-    as defined by Project Euler"""
+    """Testing Problem 11 edge case as defined by Project Euler"""
 
     assert 70600674 == grid_max(grid_creator())
 
@@ -25,4 +25,11 @@ Note:
 """
 
 # Because of the simplicity of problem 13 no function formall created
+
+
+def test_prblem14():
+    """testing problem 14 edge case as defined by project Euler"""
+
+    assert (837799, 524) == problem14_version2()
+
 
