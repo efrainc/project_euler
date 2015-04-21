@@ -4,6 +4,7 @@
 from problem11 import grid_max, grid_creator
 from problem14 import problem14_version2
 from problem15 import number_routs
+from problem16 import power_digit_sum
 
 
 def test_problem11():
@@ -33,5 +34,14 @@ def test_prblem14():
 
     assert (837799, 524) == problem14_version2()
 
+
 def test_problem15():
+    """testing problem 15 edge case as defined by project Euler"""
+
     assert 137846528820 == number_routs()
+
+
+def test_problem16():
+    """testing problem 16 edge case as defined by project Euler"""
+
+    assert 1366 == power_digit_sum()
