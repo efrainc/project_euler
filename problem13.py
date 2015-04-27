@@ -10,7 +10,7 @@ if __name__ == '__main__':
     output = 0
     for line in a:
         output += int(line)
-
+    a.close()
     print output
 
 
