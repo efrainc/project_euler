@@ -9,6 +9,9 @@ six digit number with all 9's that would give us 999999 -> 362880 * 6 =
 
 
 def digit_facorials():
+    """Find the sum of all numbers which are equal to the sum of the factorial
+    of their digits. """
+
     final_list = []
     facts = [1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880]
     for x in range(3, 2500000):
