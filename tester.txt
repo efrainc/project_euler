@@ -1,0 +1,22 @@
+hello world
+ping -c 5 google.com
+PING google.com (173.194.33.129): 56 data bytes
+64 bytes from 173.194.33.129: icmp_seq=0 ttl=57 time=43.422 ms
+64 bytes from 173.194.33.129: icmp_seq=1 ttl=57 time=64.607 ms
+64 bytes from 173.194.33.129: icmp_seq=2 ttl=57 time=54.483 ms
+64 bytes from 173.194.33.129: icmp_seq=3 ttl=57 time=86.360 ms
+64 bytes from 173.194.33.129: icmp_seq=4 ttl=57 time=65.913 ms
+
+--- google.com ping statistics ---
+5 packets transmitted, 5 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 43.422/62.957/86.360/14.231 ms
+PING google.com (173.194.33.129): 56 data bytes
+64 bytes from 173.194.33.129: icmp_seq=0 ttl=57 time=113.724 ms
+64 bytes from 173.194.33.129: icmp_seq=1 ttl=57 time=61.546 ms
+64 bytes from 173.194.33.129: icmp_seq=2 ttl=57 time=49.663 ms
+64 bytes from 173.194.33.129: icmp_seq=3 ttl=57 time=37.118 ms
+64 bytes from 173.194.33.129: icmp_seq=4 ttl=57 time=39.818 ms
+
+--- google.com ping statistics ---
+5 packets transmitted, 5 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 37.118/60.374/113.724/28.020 ms
